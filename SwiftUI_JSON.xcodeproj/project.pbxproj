@@ -9,15 +9,21 @@
 /* Begin PBXBuildFile section */
 		5CCE936446C6E32EEF8ECAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CCE9306A5B94586919EA75D /* Assets.xcassets */; };
 		5CCE94428AF8E66A8580D83D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE9EDE5BDC70D3974B48D8 /* ContentView.swift */; };
+		5CCE95A907E530370F23E22C /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE9025B7A9D8F24C525738 /* TodoModel.swift */; };
 		5CCE96C8B8AAD1776D6F50CB /* SwiftUI_JSONApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE94B41C714F76D1A8F0BB /* SwiftUI_JSONApp.swift */; };
+		5CCE985F5C58E71597C782DC /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE939321ADF3BB33EEE5B3 /* TodoListView.swift */; };
 		5CCE988CBCEE2693A2EBA070 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CCE95CF809D59D659CDBDE1 /* Preview Assets.xcassets */; };
+		5CCE9E2F913578F668A43D0E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE9DE7242F909FDD9637B4 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CCE9025B7A9D8F24C525738 /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		5CCE9306A5B94586919EA75D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5CCE939321ADF3BB33EEE5B3 /* TodoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		5CCE94B41C714F76D1A8F0BB /* SwiftUI_JSONApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_JSONApp.swift; sourceTree = "<group>"; };
 		5CCE95CF809D59D659CDBDE1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5CCE9D3CABE32F8CDDE2BB66 /* SwiftUI_JSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_JSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CCE9DE7242F909FDD9637B4 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		5CCE9EDE5BDC70D3974B48D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,6 +46,14 @@
 			);
 			sourceTree = "<group>";
 		};
+		5CCE907D49F17DCE7D4464FF /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5CCE9025B7A9D8F24C525738 /* TodoModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		5CCE9550C728E70A500B64A7 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +69,9 @@
 				5CCE9550C728E70A500B64A7 /* Preview Content */,
 				5CCE94B41C714F76D1A8F0BB /* SwiftUI_JSONApp.swift */,
 				5CCE9EDE5BDC70D3974B48D8 /* ContentView.swift */,
+				5CCE9DE7242F909FDD9637B4 /* WebService.swift */,
+				5CCE907D49F17DCE7D4464FF /* model */,
+				5CCE939321ADF3BB33EEE5B3 /* TodoListView.swift */,
 			);
 			path = SwiftUI_JSON;
 			sourceTree = "<group>";
@@ -128,6 +145,9 @@
 			files = (
 				5CCE96C8B8AAD1776D6F50CB /* SwiftUI_JSONApp.swift in Sources */,
 				5CCE94428AF8E66A8580D83D /* ContentView.swift in Sources */,
+				5CCE9E2F913578F668A43D0E /* WebService.swift in Sources */,
+				5CCE95A907E530370F23E22C /* TodoModel.swift in Sources */,
+				5CCE985F5C58E71597C782DC /* TodoListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,19 +157,11 @@
 		5CCE9132913062F4777D719A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-                OTHER_LDFLAGS = (
-                    "-Xlinker",
-                    "-interposable",
-                    "-Xlinker",
-                    "-undefined",
-                    "-Xlinker",
-                    dynamic_lookup,
-                );
-                ENABLE_BITCODE = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_JSON/Preview Content\"";
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -159,6 +171,14 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+					"-Xlinker",
+					"-undefined",
+					"-Xlinker",
+					dynamic_lookup,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icloud.SwiftUI-JSON";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -194,15 +214,6 @@
 		5CCE990217EE9A9DC5C72199 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-                OTHER_LDFLAGS = (
-                    "-Xlinker",
-                    "-interposable",
-                    "-Xlinker",
-                    "-undefined",
-                    "-Xlinker",
-                    dynamic_lookup,
-                );
-                ENABLE_BITCODE = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -235,6 +246,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -255,6 +267,14 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+					"-Xlinker",
+					"-undefined",
+					"-Xlinker",
+					dynamic_lookup,
+				);
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

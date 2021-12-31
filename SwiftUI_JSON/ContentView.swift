@@ -9,10 +9,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    private var webService = WebService()
+
+    @State
+    var todoList: [TodoModel] = [TodoModel]()
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-        .eraseToAnyView()
+
+        List(todoList) { (todo: TodoModel) in
+            TodoListView(todo: todo)
+        }
+            .onAppear {
+                webService.getTodos { todoList in
+                    self.todoList = todoList
+                }
+            }
+            .eraseToAnyView()
     }
 
     #if DEBUG
