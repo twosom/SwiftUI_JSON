@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5CCE9A97FAF866D063BC99E8"
+               BuildableName = "SwiftUI_JSON.app"
+               BlueprintName = "SwiftUI_JSON"
+               ReferencedContainer = "container:SwiftUI_JSON.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "5CCE9A97FAF866D063BC99E8"
+            BuildableName = "SwiftUI_JSON.app"
+            BlueprintName = "SwiftUI_JSON"
+            ReferencedContainer = "container:SwiftUI_JSON.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>
